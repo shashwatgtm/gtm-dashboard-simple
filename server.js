@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -8,7 +7,6 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static('public'));
 
 // API Routes
 app.get('/api/health', (req, res) => {
@@ -61,7 +59,7 @@ app.get('/', (req, res) => {
     <!DOCTYPE html>
     <html>
     <head>
-        <title>GTM Schema & Conversion Dashboard</title>
+        <title>GTM Schema Dashboard</title>
         <style>
             body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
             .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 15px; padding: 30px; }
@@ -79,13 +77,13 @@ app.get('/', (req, res) => {
     <body>
         <div class="container">
             <div class="header">
-                <h1>🎯 GTM Schema & Conversion Dashboard</h1>
-                <p>Live Schema Performance Monitoring & Conversion Optimization</p>
+                <h1>🎯 GTM Schema Dashboard</h1>
+                <p>Live Schema Performance Monitoring</p>
             </div>
             
             <div class="status">
                 <h3>✅ Dashboard Status: LIVE</h3>
-                <p>API endpoints are working and serving real-time data</p>
+                <p>API endpoints working and serving real-time data</p>
             </div>
             
             <div class="metrics">
@@ -119,8 +117,7 @@ app.get('/', (req, res) => {
             </div>
             
             <div style="margin-top: 30px; text-align: center; color: #666;">
-                <p>🚀 Deployed on Railway | 📊 Real-time Data | 🎯 Schema + Conversion Optimization</p>
-                <p><strong>Next Steps:</strong> Add Google APIs for live data, GTM integration, A/B testing</p>
+                <p>🚀 Deployed on Railway | 📊 Real-time Data</p>
             </div>
         </div>
     </body>
